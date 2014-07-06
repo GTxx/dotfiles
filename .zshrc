@@ -84,3 +84,6 @@ export PATH=$HOME/usr/local/mongodb/bin:$PATH
 
 # nginx
 export PATH=$HOME/usr/local/nginx/sbin:$PATH
+
+# TERM enviroment
+export TERM=xterm-256color

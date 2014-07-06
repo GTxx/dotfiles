@@ -62,11 +62,14 @@ let g:airline#extensions#tabline#enabled=1     " show hidden buffer
 set ttimeoutlen=50
 
 " colorscheme config 
-"colorscheme solarized
+
 syntax on
 set background=dark
 "colorscheme solarized
+"let g:solarized_termcolors=256
 colorscheme molokai
+"let g:molokai_original = 1
+let g:rehash256 = 1
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Basic config
