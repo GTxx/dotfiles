@@ -48,7 +48,7 @@ alias vi=vim
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git python django rvm ruby postgres)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,3 +87,12 @@ export PATH=$HOME/usr/local/nginx/sbin:$PATH
 
 # TERM enviroment
 export TERM=xterm-256color
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# postgresql
+export PATH=$HOME/usr/local/postgresql/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/usr/local/postgresql/lib:$LD_LIBRARY_PATH
