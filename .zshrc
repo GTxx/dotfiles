@@ -48,7 +48,7 @@ alias vi=vim
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python django rvm ruby postgres)
+plugins=(git python django pip nvm postgres)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,25 +73,27 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# python2.7.7
-export PATH=$HOME/usr/local/py2.7/bin:$PATH
+# pyenv 
+export PATH="$HOME/.pyenv/bin:$PATH" 
+eval "$(pyenv init -)" 
+eval "$(pyenv virtualenv-init -)"
 
-# python3.4
-export PATH=$HOME/usr/local/py3.4/bin:$PATH
+# java
+export JAVA_HOME=$HOME/usr/local/jdk1.7.0_71
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+# nvm
+export NVM_DIR=$HOME/.nvm
+source $NVM_DIR/nvm.sh
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+export NODE_PATH=$HOME/.nvm/v0.11.14/lib/node_modules/
 
 # mongodb
 export PATH=$HOME/usr/local/mongodb/bin:$PATH
 
 # nginx
 export PATH=$HOME/usr/local/nginx/sbin:$PATH
-
-# TERM enviroment
-export TERM=xterm-256color
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # postgresql
 export PATH=$HOME/usr/local/postgresql/bin:$PATH

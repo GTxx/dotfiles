@@ -19,6 +19,7 @@ Bundle 'bling/vim-airline'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'othree/html5.vim'
+Bundle 'pangloss/vim-javascript'
 
 " colorscheme
 Bundle 'tomasr/molokai'
