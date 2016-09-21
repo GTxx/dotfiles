@@ -68,7 +68,7 @@ syntax on
 set background=dark
 "colorscheme solarized
 "let g:solarized_termcolors=256
-colorscheme molokai
+colorscheme pablo 
 "let g:molokai_original = 1
 let g:rehash256 = 1
 
@@ -122,6 +122,8 @@ set pumheight=6                " pump menu height, make complete in small window
 if exists("&colorcolumn")
     set colorcolumn=80
 endif
+
+set nobackup
 
 " Add the virtualenv's site-packages to vim path
 if has('python')
