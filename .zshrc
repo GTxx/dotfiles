@@ -10,7 +10,7 @@ ZSH_THEME="frisk"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vi=vim
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

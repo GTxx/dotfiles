@@ -1,29 +1,31 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 """""""""""""""""""""""""""""""""""
 ""original repos on GitHub
 """""""""""""""""""""""""""""""""""
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'bling/vim-airline'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'Glench/Vim-Jinja2-Syntax'
-Bundle 'othree/html5.vim'
-Bundle 'pangloss/vim-javascript'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
 
 " colorscheme
-Bundle 'tomasr/molokai'
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+
+call vundle#end()
 
 filetype plugin indent on     " required!
 "
