@@ -1,10 +1,13 @@
 import os
 
 # clear old dotfiles
-os.system("rm -r ~/.fonts ~/.vimrc ~/.zshrc ~/.pip")
+files = ['.fonts', '.vimrc', '.zshrc', '.pip', '.gitconfig']
+for file in files:
+    os.system("rm -r ~/{}".format(file)
+
+
 current_dir = os.getcwd()
 
-os.system("ln -s {} {}".format(current_dir + '/.fonts', "~/.fonts"))
-os.system("ln -s {} {}".format(current_dir + '/.vimrc', "~/.vimrc"))
-os.system("ln -s {} {}".format(current_dir + '/.zshrc', "~/.zshrc"))
-os.system("ln -s {} {}".format(current_dir + '/.pip', "~/.pip"))
+for file in files:
+    os.system("ln -s {} {}".format(current_dir + '/' + file, "~/" + file))
+
