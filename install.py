@@ -1,7 +1,8 @@
 import os
 
 # clear old dotfiles
-files = ['.fonts', '.vimrc', '.zshrc', '.pip', '.gitconfig']
+files = ['.fonts', '.vimrc', '.zshrc', '.pip', '.gitconfig', '.aria2',
+         '.config/autostart']
 for file in files:
     os.system("rm -r ~/{}".format(file))
 
