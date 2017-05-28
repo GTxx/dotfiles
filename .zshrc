@@ -48,7 +48,7 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow python django pip nvm postgres rvm pyenv lein mix npm ansible apm cargo rust eslint mvn gradle)
+plugins=(git git-flow python django pip nvm postgres rvm pyenv lein mix npm ansible apm cargo rust eslint mvn gradle rustup)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,8 +82,6 @@ eval "$(pyenv virtualenv-init -)"
 export NVM_DIR=$HOME/.nvm
 source $NVM_DIR/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-export NODE_PATH=$HOME/.nvm/v0.11.14/lib/node_modules/
-export NVM_IOJS_ORG_MIRROR=https://iojs.org/dist
 
 # mongodb
 export PATH=$HOME/usr/local/mongodb/bin:$PATH
@@ -106,13 +104,11 @@ alias fuck='eval $(/home/x/.pyenv/versions/2.7.9/bin/thefuck $(fc -ln -1 | tail 
 export PATH=$HOME/usr/local:$PATH
 
 # rust
-export RUST_SRC_HOME=$HOME/rustc-1.7.0/
-export RUST_SRC_PATH=$RUST_SRC_HOME/src
 export PATH=$HOME/.cargo/bin:$PATH
 
 # java
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH 
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+#export PATH=$JAVA_HOME/bin:$PATH 
+#export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH=$HOME/.apache-maven-3.3.9/bin:$PATH
 export PATH=$HOME/.gradle-2.13/bin:$PATH
