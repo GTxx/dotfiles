@@ -100,6 +100,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 alias fuck='eval $(/home/x/.pyenv/versions/2.7.9/bin/thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
+export PATH=$HOME/.local/bin:$PATH
+
 # leiningen
 export PATH=$HOME/usr/local:$PATH
 
@@ -110,5 +112,18 @@ export PATH=$HOME/.cargo/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 #export PATH=$JAVA_HOME/bin:$PATH 
 #export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export PATH=$HOME/.apache-maven-3.3.9/bin:$PATH
+export PATH=$HOME/.apache-maven/bin:$PATH
 export PATH=$HOME/.gradle-2.13/bin:$PATH
+
+# elk
+export PATH=$HOME/.local/filebeat-5.6.2-linux-x86_64:$PATH
+export PATH=$HOME/.local/logstash-5.6.2/bin:$PATH
+export PATH=$HOME/.local/metricbeat-5.6.2-linux-x86_64:$PATH
+
+# linuxbrew
+PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$(brew --prefix)/share/man:$MANPATH"
+export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
+
+# pipenv
+eval "$(pipenv --completion)"

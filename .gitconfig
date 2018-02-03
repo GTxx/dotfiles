@@ -1,5 +1,6 @@
 [user]
-	name = gtxx
+	name = xiongxiong
 	email = xiongxiong1986@gmail.com
 [core]
 	editor = vim
+    quotepath = off
