@@ -15,3 +15,5 @@ zshrc
 zsh配置，包括一些常用的alias，插件
 
 
+## 安装
+python install.py
