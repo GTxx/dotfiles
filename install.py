@@ -33,9 +33,32 @@ os.system("curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master
 # pipenv
 os.system("sudo apt-get install -y --no-install-recommends python-pip")
 os.system("sudo pip install setuptools")
-os.system("sudo pip install --user pipenv")
+os.system("pip install --user pipenv")
 
 # tmux
 os.system("sudo apt install tmux")
 os.system("git clone https://github.com/gpakosz/.tmux.git ~/.tmux")
+
+# switch to zsh
+os.system("chsh -s /bin/zsh")
+
+# google chrome browser
+os.system("wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -")
+os.system("echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list")
+os.system("sudo apt-get update ")
+os.system("sudo apt install google-chrome-stable -y")
+
 os.system("ln -s ~/.tmux/.tmux.conf ~/.tmux.conf")
+
+# vscode
+os.system("curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg")
+os.system("sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg")
+cmd = """
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+"""
+os.system(cmd)
+os.system("sudo apt-get update")
+os.system("sudo apt-get install code")
+
+# nvm node.js
+os.system("curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash")
