@@ -48,7 +48,7 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow python django pip nvm postgres rvm pyenv lein mix npm ansible apm cargo rust eslint mvn gradle rustup)
+plugins=(git git-flow python django pip nvm postgres rvm pyenv lein mix npm ansible apm cargo rust eslint mvn gradle rustup svn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,47 +83,16 @@ export NVM_DIR=$HOME/.nvm
 source $NVM_DIR/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
-# mongodb
-export PATH=$HOME/usr/local/mongodb/bin:$PATH
-
-# nginx
-export PATH=$HOME/usr/local/nginx/sbin:$PATH
-
-# postgresql
-#export PATH=/usr/local/pgsql/bin:$PATH
-#export LD_LIBRARY_PATH=/usr/local/pgsql/lib
-
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-alias fuck='eval $(/home/x/.pyenv/versions/2.7.9/bin/thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-
 export PATH=$HOME/.local/bin:$PATH
-
-# leiningen
-export PATH=$HOME/usr/local:$PATH
 
 # rust
 export PATH=$HOME/.cargo/bin:$PATH
 
 # java
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-#export PATH=$JAVA_HOME/bin:$PATH 
-#export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export PATH=$HOME/.apache-maven/bin:$PATH
-export PATH=$HOME/.gradle-2.13/bin:$PATH
-
-# elk
-export PATH=$HOME/.local/filebeat-5.6.2-linux-x86_64:$PATH
-export PATH=$HOME/.local/logstash-5.6.2/bin:$PATH
-export PATH=$HOME/.local/metricbeat-5.6.2-linux-x86_64:$PATH
-
-# linuxbrew
-PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$(brew --prefix)/share/man:$MANPATH"
-export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
+export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH 
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 # pipenv
 eval "$(pipenv --completion)"
+

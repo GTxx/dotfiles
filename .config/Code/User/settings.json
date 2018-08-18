@@ -1,0 +1,18 @@
+{
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "vim.useCtrlKeys": false,
+    "workbench.colorCustomizations": {},
+    "editor.fontSize": 18,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "gitlens.advanced.messages": {
+      "suppressShowKeyBindingsNotice": true
+    },
+    // Controls if suggestions should be accepted with "Enter" - in addition to "Tab". Helps to avoid ambiguity between inserting new lines and accepting suggestions.
+    "window.zoomLevel": 0,
+    "workbench.editor.showTabs": false,
+    "prettier.eslintIntegration": true,
+
+    // "javascript.format.enable": false,
+  }

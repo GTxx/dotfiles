@@ -2,7 +2,9 @@ import os
 
 # clear old dotfiles
 files = ['.fonts', '.vimrc', '.zshrc', '.pip', '.gitconfig', '.aria2',
-         '.config/autostart', '.psqlrc']
+         '.config/autostart/guake.desktop',
+         '.config/Code/User/settings.js',
+         '.psqlrc']
 for file in files:
     try:
         os.system("rm -r ~/{}".format(file))
@@ -13,6 +15,10 @@ for file in files:
 current_dir = os.getcwd()
 
 for file in files:
+    if "/" in file:
+        dir_path = "/".join(".config/code/a.js".split("/")[:-1])
+        if not os.path.exists(dir_path):
+            os.mkdir("~/{}".format(dir_path))
     os.system("ln -s {} {}".format(current_dir + '/' + file, "~/" + file))
 
 
