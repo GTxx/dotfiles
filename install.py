@@ -41,6 +41,9 @@ os.system("sudo apt-get install -y --no-install-recommends python-pip")
 os.system("sudo pip install setuptools")
 os.system("pip install --user pipenv")
 
+# pipsi
+os.system("curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python")
+
 # tmux
 os.system("sudo apt install tmux")
 os.system("git clone https://github.com/gpakosz/.tmux.git ~/.tmux")
